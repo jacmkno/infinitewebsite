@@ -39,7 +39,7 @@ Payment with PAYU
   
   signature = md5(`${C.ApiKey}~${C.merchantId}~${C.referenceCode}~${C.amount}~${C.currency}~${C.paymentMethods}~${C.iin}~${C.pseBanks}`);
   
-  Object.entries(C).forEach((field, value)=>{
+  Object.entries(C).forEach(([field, value])=>{
     const n = document.querySelector(`INPUT[name="${field}"]`);
     if(n) n.value = value;
   });  
